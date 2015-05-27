@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/rainforest_back"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/auth_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_style"
+            android:hint="Email Id"
+            android:inputType="textEmailAddress"
+            android:nextFocusForward="@+id/auth_password"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/auth_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/auth_username"
+            android:background="@drawable/edit_style"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:nextFocusForward="@+id/auth_repass"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/auth_repass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/auth_password"
+            android:background="@drawable/edit_style"
+            android:hint="Retype Password"
+            android:inputType="textPassword"
+            android:nextFocusForward="@+id/auth_submit_button"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/auth_submit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/auth_repass"
+            android:background="#33B5E5" />
+    </LinearLayout>
+
+</LinearLayout>
